@@ -1,0 +1,511 @@
+@font-face {
+    font-family: Inter-Regular;
+    src: url("/fonts/Inter_18pt-Regular.ttf");
+}
+
+@font-face {
+    font-family: Inter-Medium;
+    src: url("/fonts/Inter_18pt-Medium.ttf");
+}
+
+@font-face {
+    font-family: Inter-Bold;
+    src: url("/fonts/Inter_18pt-Bold.ttf");
+}
+
+@font-face {
+    font-family: Inter-ExtraBold;
+    src: url("/fonts/Inter_18pt-ExtraBold.ttf");
+}
+
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFFFFF;
+}
+
+main {   
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header section */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2.75em 0;
+    background-image: url("img/header.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headers-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875em;
+}
+
+h1, h2 {
+    color: #FFFFFF;
+}
+
+h1 {
+    font-family: Inter-ExtraBold;
+    font-size: 1.875rem;
+}
+
+h2 {
+    font-size: 1.1875rem;
+    font-family: Inter-Bold;
+    margin-bottom: 0.5em;
+}
+
+/* Search input section */
+.search-section {
+    display: flex;
+    margin: 0 auto;
+    width: 86%;
+    position: relative; 
+    top: -20px;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    border: 1px solid #D1D5DB;
+}
+
+.fa-magnifying-glass::before {
+    display: inline-block;
+    width: 13px;
+    height: 13px; 
+    font-size: 13px; 
+    line-height: 13px; 
+    color: #9CA3AF;
+}
+
+.search-container {
+    display: flex;
+    padding: 0.4375em 0.3125em 0.4375em 0.5625em;
+    gap: 0.375em;
+    width: 100%;
+}
+
+.search-input,
+.search-btn {
+    border: none;
+    font-family: Inter-Medium;
+}
+
+.search-input {
+    font-size: 0.9375rem;
+}
+
+.search-btn {
+    font-size: 0.875rem;
+}
+
+.search-input {
+    color: #6B7280;
+    width: 100%;
+}
+
+input[type="text"] {
+    padding: 0;
+}
+
+.search-btn {
+    color: #374151;
+    background-color: #F9FAFB;
+    border-left: 1px solid #D1D5DB;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    width: 30%;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* CSS for the initial container and no data search result */
+.initial-container { /* maybe remove */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75em;
+}
+
+.initial-img { 
+    width: calc(128px*1.05);
+    height: calc(71px*1.05);
+}
+
+.no-data {
+    font-family: Inter-Bold;
+    font-size: 1.125rem;
+    color: #DFDDDD;
+    padding: 0 0.75em;
+    max-width: 410px;
+    text-align: center;
+}
+
+/* Movie results section */
+.movies-section {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5em;
+}
+
+.movies-section:last-child {
+    margin-bottom: 1em;
+}
+
+.movie {
+    display: flex;
+    gap: 1.3125em;
+    max-width: 100%;
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-main, .movie-details, 
+.movie-description {
+    display: flex;
+}
+
+.movie-main {
+    gap: 0.625em;
+    margin-bottom: 0.75em;
+}
+
+.movie-details {
+    flex-direction: column;
+    font-size: 0.6875rem;
+    margin-bottom: 1em;
+    gap: 0.75em;
+}
+
+.movie-details-wrapper,
+.watchlist-container {
+    display: flex;
+}
+
+.watchlist-container {
+    align-items: center;
+}
+
+.movie-poster {
+    width: calc(70px*1.13);
+    height: calc(105px*1.13);
+}
+
+.movie-title {
+    color: #000000;
+    font-size: 1rem;
+    font-family: Inter-Medium;
+    white-space: normal; /* allow text to wrap */
+    word-wrap: break-word;
+    max-width: 185px;
+}
+
+.fa-star::before {
+    display: inline-block;
+    color: #FEC654;
+    width: 14px;
+    height: 14px; 
+    font-size: 14px; 
+    line-height: 14px; 
+}
+
+.movie-year {
+    margin-right: 0.5em;
+}
+
+.fa-circle::before {
+    display: none;
+}
+
+.circle {
+    margin-right: 0.5em;
+}
+
+.movie-rating,
+.movie-details,
+.movie-description {
+    font-family: Inter-Regular;
+}
+
+.movie-rating {
+    color: #111827;
+    font-size: 0.75rem;
+}
+
+.rating-container {
+    display: flex;
+    align-items: center;
+    gap: 0.375em;
+}
+
+.movie-runtime {
+    margin-right: 0.86em;
+}
+
+.add-watchlist, .fa-circle-check::before {
+    margin-right: 0.35em;
+}
+
+.add-watchlist {
+    border: none;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.add-watchlist,
+.fa-circle-plus::before,
+.fa-circle-check::before {
+    width: 15px;
+    height: 15px;
+}
+
+.fa-circle-plus::before,
+.fa-circle-check::before {
+    display: inline-block;
+    font-size: 15px; 
+    line-height: 15px; 
+}
+
+.fa-circle-plus::before {
+    color: #111827;
+}
+
+.fa-circle-check::before {
+    color: #41ca36;
+}
+
+.description-text {
+    color: #6B7280;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    white-space: normal; /* allow text to wrap */
+    word-wrap: break-word;
+}
+
+/* utility classes */
+.border-bottom {
+    border-bottom: 1.5px solid #E5E7EB; /* add a bottom border on a movie */
+    margin-bottom: 1.3125em;
+    padding-bottom: 1.3125em;
+}
+
+.center-container {
+    align-items: center; /* center the initial container inside movies-section */
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.full-height {
+    height: 100vh; /* set main to full viewport height */
+}
+
+.disable-btn {
+    cursor: not-allowed;
+}
+
+@media (min-width: 481px) {
+    h1 {
+        font-size: 2.4375rem;
+    }
+    
+    h2 {
+        font-size: 1.375rem;
+    }
+
+    .search-section {
+        width: 78%;
+    }
+
+    .fa-magnifying-glass::before {
+        width: 20px;
+        height: 20px; 
+        font-size: 20px; 
+        line-height: 20px; 
+    }
+
+    .search-container {
+        padding: 0.5625em 0.375em 0.5625em 0.8125em;
+        gap: 0.5625em;
+    }
+
+    .search-input,
+    .search-btn {
+        font-size: 1rem;
+    }
+
+    .search-btn {
+        width: 22%;
+    }
+
+    .initial-img {
+        width: calc(148px*1.05);
+        height: calc(91px*1.05);
+    }
+
+    .no-data {
+        font-size: 1.25rem;
+        max-width: 570px;
+        padding: 0 0.5em;
+    }
+
+    /* Movie results section */
+    .movies-section {
+        margin: 0 auto;
+        padding: 1em 0.5em 0 0.5em; 
+    }
+
+    .movies-section:last-child {
+        margin-bottom: 1.5em;
+    }
+
+    .movie {
+        gap: 1.5625em;
+    }
+
+    .movie-main {
+        gap: 0.625em;
+        margin-bottom: 1.1875em;
+    }
+    
+    .movie-details {
+        font-size: 0.875rem;
+        margin-bottom: 1em;
+    }
+    
+    .movie-poster {
+        width: calc(100px*1.13);
+        height: calc(143px*1.13);
+    }
+    
+    .movie-title {
+        font-size: 1.25rem;
+    }
+    
+    .fa-star::before {
+        width: 16px;
+        height: 16px; 
+        font-size: 16px; 
+        line-height: 16px; 
+    }
+    
+    .movie-year {
+        margin-right: 1em;
+    }
+    
+    .fa-circle::before {
+        display: inline-block;
+        color: #9c9c9c;
+        width: 6px;
+        height: 6px; 
+        font-size: 6px; 
+        line-height: 6px; 
+    }
+    
+    .circle {
+        margin-right: 1.13em;
+    }
+    
+    .movie-rating {
+        font-size: 0.8125rem;
+    }
+    
+    .rating-container {
+        display: flex;
+        align-items: center;
+        gap: 0.375em;
+    }
+    
+    .movie-runtime {
+        margin-right: 0.86em;
+    }
+    
+    .movie-genre {
+        margin-right: 2.22em;
+    }
+    
+    .add-watchlist,
+    .fa-circle-plus::before,
+    .fa-circle-check::before {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .fa-circle-plus::before,
+    .fa-circle-check::before {
+        font-size: 16px; 
+        line-height: 16px; 
+    }
+    
+    .description-text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 1.5625rem;
+    }
+
+    header {
+        flex-direction: row;
+        padding: 6em 0;
+    }
+
+    .headers-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 74%;
+    }
+
+    .search-section {
+        width: 60%;
+    }
+    
+    /* Movie results section */
+    .movies-section {
+        margin: 0 auto;
+        padding: 1.5625em 0.5em 0 0.5em; 
+    }
+
+    .movie-details {
+        gap: 0.875em;
+    }
+
+    .details-container {
+        max-width: 752px;
+    }
+
+    .add-watchlist, .fa-circle-check::before {
+        margin-right: 0.5em;
+    }
+
+    .movie-title {
+        white-space: nowrap;
+        max-width: 100%
+    }
+}

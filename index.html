@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link cdn font-awesome to use the icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <title>Movie Watchlist</title>
+</head>
+<body> 
+    <main>
+        <header>
+            <div class="headers-container">
+                <h1><a href="index.html">Find your film</a></h1> 
+                <h2 class="watchlist-header"><a href="watchlist.html">My Watchlist</a></h2>
+            </div>
+        </header>
+        <section class="search-section">
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon" aria-label="search icon"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="Search for a movie">    
+            </div>
+            <button class="search-btn" id="search-btn">Search</button>
+        </section>
+        <section class="movies-section" id="movies-section">
+            <div class="initial-container">
+                <img src="img/initial.svg" class="initial-img" alt="Start exploring">
+                <p class="no-data">Start exploring</p>
+            </div>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
