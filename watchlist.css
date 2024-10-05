@@ -54,7 +54,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.875em;
+    gap: 2.125em;
 }
 
 h1, h2 {
@@ -69,7 +69,6 @@ h1 {
 h2 {
     font-size: 1.1875rem;
     font-family: Inter-Bold;
-    margin-bottom: 0.5em;
 }
 
 /* CSS for the initial container and no movies in watchlist */
@@ -146,7 +145,7 @@ a.index-link button {
     flex-direction: column;
     font-size: 0.6875rem;
     margin-bottom: 1em;
-    gap: 0.875em;
+    gap: 1em;
 }
 
 .movie-details-wrapper,
@@ -226,6 +225,7 @@ a.index-link button {
 .new-movies-btn,
 .fa-circle-minus::before,
 .fa-circle-plus::before {
+    display: inline-block;
     width: 15px;
     height: 15px;
     font-size: 15px; 
@@ -233,7 +233,6 @@ a.index-link button {
 }
 
 .fa-circle-plus::before {
-    display: inline-block;
     color: #111827;
 }
 
