@@ -1,4 +1,3 @@
-const apiKey = 'e5d7e93b'
 const moviesSection = document.getElementById("movies-section")
 const main = document.querySelector("main")
 
@@ -34,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 function getMovie() {
+    const apiKey = 'e5d7e93b'
     const movieName = searchInput.value
 
     return fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${movieName}&type=movie`)
